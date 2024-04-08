@@ -78,7 +78,7 @@ header a {
     transition: .2s;
 }
 
-header a:hover{
+header nav.menu-desktop a:hover{
     color: #fff;
     transform: scale(1.07);
 }
@@ -87,9 +87,73 @@ header nav ul {
     list-style-type: none;
 }
 
-header nav ul li{
+header nav.menu-desktop ul li{
     display: inline-block;
     padding: 0 40px;
+}
+
+/* ESTILO DO MENU MOBILE */
+.btn-abrir-menu i{
+    color: #652073;
+    font-size: 40px;
+    display: none;    
+}
+
+.menu-mobile{
+    background-color: #171421;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+    
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fecharm i{
+    color: #652073;
+    font-size: 30px;
+}
+
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #723b7d;
+}
+
+.overlay-menu{
+    background-color: #000000bd;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
 }
 
 /* ESTILO DO TOPO DO SITE */
@@ -304,6 +368,19 @@ form .btn-enviar input{
     transition: .2s;
 }
 
+/* ESTILO BOTÃO DE INICIO */
+.btn-topo i{
+    color: #652073;
+    font-size: 35px;
+}
+
+.btn-topo{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    clip: rect();
+}
+
 /* ESTILO DO RODAPÉ */
 
 footer{
@@ -336,4 +413,100 @@ footer .line-footer p i{
 footer .line-footer p a{
     color: #fff;
     text-decoration: none;
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 1020px){
+    /* CLASSES GERAIS */
+    .flex{
+        flex-direction: column;
+    }
+
+    h2.titulo{
+        font-size: 34px;
+        line-height: 30px;    
+    }
+
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
+    }
+
+    /* CABEÇALHO */
+    section.topo-do-site .flex{
+        gap: 40px;
+    }
+
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+
+    /* TOPO DO SITE */
+    section.topo-do-site{
+        padding: 20px 8%;
+    }
+
+    .topo-do-site .txt-topo-site h1{
+        font-size: 30px;
+    }
+
+    .topo-do-site .img-topo-site img{
+        width: 100%;
+    }
+
+    /* MENU MOBILE */
+
+    .btn-abrir-menu i{
+        display: block;
+    }
+
+    /* ESPECIALIDDES */
+    section.especialidades{
+        padding: 40px 8%;
+    }
+
+    /* SOBRE */
+    section.sobre {
+        padding: 80px 8%;
+    }
+
+    section.sobre .flex{
+        flex-direction: column-reverse;
+    }
+
+    .sobre .txt-sobre h2{
+        font-size: 34px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .btn-social{
+        text-align: center;
+    }
+
+    .img-sobre img{
+        width: 100%;
+    }
+
+    /* PORTIFOLIO */
+
+    section.portfolio{
+        padding: 80px 8%;
+    }
+
+    .img-port{
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    section.portfolio .flex{
+        gap: 60px;
+    }
+
+    /* RODAPÉ */
+
+    footer .btn-social{
+        margin-bottom: 20px;
+    }
 }

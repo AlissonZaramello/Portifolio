@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <div class="interface">
+        <div class="interface" id="topo">
             <div class="logo">
                 <a href="index.html">
                     <img src="img/logo.png" alt="Logo AZ">
@@ -31,6 +31,30 @@
                     <button>Contato</button>
                 </a>
             </div><!--Fechamento btn-contato-->
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fecharm">
+                    <i class="bi bi-x-lg"></i>
+                </div><!--Fechamento btn-fechar-->
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Ínicio</a></li>
+                        <li><a href="#especialidades">Especialidades</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav><!--Fechamento nav-->
+
+            </div><!--Fechamento menu-mobile-->
+            <div class="overlay-menu" id="overlay-menu">
+
+            </div>
         </div><!--Fechamento interface-->
     </header>
 
@@ -148,8 +172,7 @@
             </div><!--Fechamento interface-->
         </section><!--Fechamento formulario-->
 
-        
-    </main>
+        <a href="#topo" class="btn-topo"><i class="bi bi-arrow-up-circle-fill"></i></a>
 
     <footer>
         <div class="interface">
