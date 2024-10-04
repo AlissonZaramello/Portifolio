@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAV ICON -->
+    <link rel="icon" type="image/png" sizes="16x16"  href="/img/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+     <!-- FIM FAV ICON -->
     <link rel="stylesheet" href="css/style.css">
     <!-- BOOTSTRAP ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -145,8 +150,8 @@
             <div class="interface">
                 <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
                 <div class="flex">
-                    <div class="img-port" style="background-image: url(img/imagem-portfolio.png);">
-                        <div class="overlay">Em Andamento...</div>
+                    <div class="img-port" id="NAPNE" style="background-image: url(img/NAPNE.jpg);">
+                        <div class="overlay">NAPNE/CSP</div>
                     </div>
                     <div class="img-port" style="background-image: url(img/imagem-portfolio.png);">
                         <div class="overlay">Em Andamento...</div>
@@ -157,6 +162,31 @@
                 </div>
             </div><!--Fechamento interface-->
         </section><!--Fechamento portfolio-->
+
+        <section class="popup" id="popupProjNapne">
+            <div class="interface">
+                <div class="titulo-projeto">
+                    <p>Núcleo NAPNE/CSP</p>
+                </div> <!--Fechamento titulo-projeto-->
+                <div class="janela">
+                    <div class="img-projeto">
+                        <img src="img/NAPNE2.jpg" alt="Imagem do site">
+                    </div><!--Fechamento img-projeto-->
+                    <div class="informacoes">
+                        <span>Informações do Projeto:</span>
+                        <p>Eu e meu grupo realizamos a criação de um site para os dois nucleos de nossa instituição.
+                            Essa criação foi para matéria Programação para Web 1.
+                        </p>
+                        <span>Técnologias Usadas:</span>
+                        <p>HTML, CSS, Javascript</p>
+                        <a href="https://pedro-eugelmi.github.io/Napne-CSP/napne.html" target="_blank">
+                            <button>Visite o Projeto!</button>
+                        </a>
+                        <a class="fechar-popup" id="fechar-popup">Fechar</a>
+                    </div>
+                </div><!--Fechamento janela-->
+            </div><!--Fechamento interface-->
+        </section><!--Fechamento popup-->
 
         <section class="formulario" id="contato">
             <div class="interface">
@@ -172,7 +202,8 @@
             </div><!--Fechamento interface-->
         </section><!--Fechamento formulario-->
 
-        <a href="#topo" class="btn-topo"><i class="bi bi-arrow-up-circle-fill"></i></a>
+        <!-- Botão de voltar para o inicio -->
+        <a href="#topo" class="btn-topo" id="btn-topo"><i class="bi bi-arrow-up-circle-fill"></i></a>
 
     <footer>
         <div class="interface">

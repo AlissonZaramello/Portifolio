@@ -322,6 +322,90 @@ section.portfolio .flex{
     opacity: 1;
 }
 
+/* ESTILO DO POPUP DOS PROJETOS */
+
+section.popup{
+    padding: 80px 4%;
+    display: none;
+    opacity: 100;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    background-color: #16011a7a;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.popup .titulo-projeto {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+.popup .interface{
+    background-color: #0d091d;
+    border-radius: 30px;
+    box-shadow: 0px 0px 8px #752d83d8;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.popup .janela{
+    display: flex;
+}
+
+.popup .img-projeto{
+    width: 50%;
+    margin-right: 20px;
+}
+
+.popup .informacoes{
+    line-height: 30px;
+    width: 50%;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.popup .informacoes span{
+    line-height: 55px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #723b7d;
+}
+
+.popup .img-projeto img {
+    width: 100%;
+}
+
+.popup button{
+    margin-top: 20px;
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #652073;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.popup .fechar-popup{
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    cursor:pointer;
+}
+
 /* ESTILO DO FORMULÁRIO DE CONTATO */
 
 section.formulario{
@@ -375,10 +459,15 @@ form .btn-enviar input{
 }
 
 .btn-topo{
+    visibility: hidden;
     position: fixed;
     right: 10px;
     bottom: 10px;
     clip: rect();
+}
+
+.btn-topo.show {
+    visibility: visible;
 }
 
 /* ESTILO DO RODAPÉ */
